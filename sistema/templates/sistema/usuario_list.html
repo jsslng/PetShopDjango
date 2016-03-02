@@ -1,0 +1,10 @@
+{% extends "sistema/header.html" %}
+{% block content %}
+<a href="{% url 'sistema_usuario_create' %}">Novo Usuário</a>
+<br/>
+<br/>
+{% for usuario in object_list %}
+    {{ usuario}} - <a href="{% url 'sistema_usuario_update' usuario.pk %}">Editar</a> | <a href="{% url 'sistema_usuario_delete' usuario.pk %}">Deletar</a>
+    <br/>
+{% endfor %}
+{% endblock %}

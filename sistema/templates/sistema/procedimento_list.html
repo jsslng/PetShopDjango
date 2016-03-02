@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar</title>
+</head>
+<body>
+<a href="{% url 'sistema_procedimento_create' %}">Novo</a>
+<br/>
+<br/>
+{% for procedimento in object_list %}
+    {{ procedimento}} - <a href="{% url 'sistema_procedimento_update' procedimento.pk %}">Editar</a> | <a href="{% url 'sistema_procedimento_delete' procedimento.pk %}">Deletar</a>
+    <br/>
+{% endfor %}
+</body>
+</html>

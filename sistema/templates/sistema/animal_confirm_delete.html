@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deletar</title>
+</head>
+<body>
+<form action="{% url 'sistema_animals_delete' object.pk %}" method="POST">
+    {% csrf_token %}
+    Realmente deletar o animal "{{ object }}"?
+    <button>Deletar</button>
+</form>
+</body>
+</html>
